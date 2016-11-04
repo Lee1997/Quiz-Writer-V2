@@ -34,11 +34,16 @@ public class SetupScene {
 		topicField = new TextField();
 		quantityField = new TextField();
 		difficultyField = new TextField();
-		
+		/*
+		 * BRING THIS BACK
 		topicField.setPromptText("Game of Thrones");
 		quantityField.setPromptText("25");
-		difficultyField.setText("Replace with drop down");
+		difficultyField.setText("Medium");
+		*/
 		
+		topicField.setText("Game of Thrones");
+		quantityField.setText("25");
+		difficultyField.setText("Medium");
 		//Submit Button
 		Button submit = new Button("Submit!");
 		submit.setStyle("-fx-min-width: 200px; -fx-min-height: 75px; -fx-font-size: 40px; -fx-base: #b3ffff");
@@ -77,10 +82,6 @@ public class SetupScene {
 		quantityField.setStyle("-fx-min-height: 75px; -fx-font-size: 25px;");
 		difficultyField.setStyle("-fx-min-height: 75px; -fx-font-size: 25px;");
 		
-		
-		
-		grid.setStyle("-fx-background-color: #d9d9d9");
-		
 		grid.getChildren().addAll(submitHolder, quizTopic, questionQuantity, difficultyLabel);
 		grid.getChildren().addAll(topicField, quantityField, difficultyField);
 		
@@ -110,8 +111,13 @@ public class SetupScene {
 		}
 		
 		if(length != Integer.MAX_VALUE){
-			System.out.println("Working");
+			newMainScene(length);
 		}
+	}
+	
+	public void newMainScene(int length){
+		mainScene = new MainScene(window, topicField.getText(), length, difficultyField.getText());
+		window.setScene(mainScene.scene);
 	}
 	
 	

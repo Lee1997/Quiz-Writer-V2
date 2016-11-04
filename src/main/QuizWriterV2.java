@@ -9,7 +9,7 @@ public class QuizWriterV2 extends Application{
 	public StartScene startScene;
 	public Stage window;
 	
-	public static final int WIDTH = 800, HEIGHT = 600;
+	public static final int WIDTH = 800, HEIGHT = 800;
 	
 	public static void main(String[] args) {
 		launch(args);

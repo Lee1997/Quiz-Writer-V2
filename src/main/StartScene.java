@@ -38,9 +38,9 @@ public class StartScene{
 		newQuizButton.setEffect(new DropShadow());
 		newQuizButton.setPrefSize(300, 100);
 		newQuizButton.setStyle("-fx-font-size: 40px; -fx-base: #b3ffff");
-		newQuizButton.setMaxWidth(Double.MAX_VALUE);
+		newQuizButton.setMaxWidth(600);
 		newQuizButton.setAlignment(Pos.CENTER);
-		newQuizButton.setPadding(new Insets(10, 0, 10, 0));
+		newQuizButton.setPadding(new Insets(10, 50, 10, 50));
 		newQuizButton.paddingProperty();
 		newQuizButton.setOnAction(e -> newQuiz());
 		
@@ -48,12 +48,12 @@ public class StartScene{
 		loadQuizButton.setEffect(new DropShadow());
 		loadQuizButton.setPrefSize(300, 100);
 		loadQuizButton.setStyle("-fx-font-size: 40px; -fx-base: #b3ffff");
-		loadQuizButton.setMaxWidth(Double.MAX_VALUE);
+		loadQuizButton.setMaxWidth(600);
 		loadQuizButton.setAlignment(Pos.CENTER);
-		loadQuizButton.setPadding(new Insets(10, 0, 10, 0));
+		loadQuizButton.setPadding(new Insets(10, 100, 10, 100));
 		
 		VBox layout = new VBox(20);
-		layout.setPadding(new Insets(150, 150, 150, 150));
+		layout.setAlignment(Pos.CENTER);
 		layout.getChildren().addAll(query, newQuizButton, loadQuizButton);
 		layout.setStyle("-fx-background-color: #ffc299");
 		initScene = new Scene(layout, QuizWriterV2.WIDTH, QuizWriterV2.HEIGHT);
